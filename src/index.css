@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #2997FF;
+  --color-zinc: #101010;
+  --color-gray: #86868b;
+  --color-gray-100: #94928d;
+  --color-gray-200: #afafaf;
+  --color-gray-300: #42424570;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    color: white;
+    width: 100dvw;
+    overflow-x: hidden;
+    height: 100%;
+    background: #000;
+    border-color: #3b3b3b;
+    user-select: none;
+  }
+
+  canvas {
+    touch-action: none;
+  }
+
+  .screen-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+  }
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility nav-height {
+  height: calc(100vh - 60px);
+}
+
+@utility btn {
+  padding-inline: calc(var(--spacing) * 5);
+  padding-block: calc(var(--spacing) * 2);
+  border-radius: var(--radius-3xl);
+  background-color: var(--color-blue);
+  margin-block: calc(var(--spacing) * 5);
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+  }
+}
+
+@utility color-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 4);
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-300);
+  backdrop-filter: blur(8px);
+}
+
+@utility size-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing) * 1);
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-300);
+  backdrop-filter: blur(8px);
+  margin-left: calc(var(--spacing) * 3);
+  gap: calc(var(--spacing) * 1);
+}
+
+@utility size-btn {
+  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 10);
+  font-size: var(--text-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-radius: var(--radius-full);
+  transition: all 150ms;
+}
+
+@utility common-padding {
+  padding-block: calc(var(--spacing) * 20);
+  padding-inline: calc(var(--spacing) * 5);
+
+  @media (width >= theme(--breakpoint-sm)) {
+    padding-block: calc(var(--spacing) * 32);
+    padding-inline: calc(var(--spacing) * 10);
+  }
+}
+
+@utility section-heading {
+  color: var(--color-gray);
+  font-size: var(--text-3xl);
+  margin-bottom: calc(var(--spacing) * 5);
+  font-weight: 500;
+  opacity: 0;
+  translate: 0 80px;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: var(--text-5xl);
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: var(--text-6xl);
+    margin-bottom: 0;
+  }
+}
+
+@utility feature-text {
+  color: var(--color-gray);
+  max-width: 28rem;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  opacity: 0;
+  translate: 0 100px;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: var(--text-xl);
+  }
+}
+
+@utility feature-text-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: calc(var(--spacing) * 10);
+  gap: calc(var(--spacing) * 5);
+
+  @media (width >= theme(--breakpoint-md)) {
+    flex-direction: row;
+    margin-top: calc(var(--spacing) * 16);
+  }
+}
+
+@utility feature-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  scale: 1.5;
+  opacity: 0;
+}
+
+@utility feature-video-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 5);
+  align-items: center;
+
+  @media (width >= theme(--breakpoint-md)) {
+    flex-direction: row;
+  }
+}
+
+@utility link {
+  color: var(--color-blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: var(--text-xl);
+  opacity: 0;
+  translate: 0 80px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@utility control-btn {
+  margin-left: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 4);
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-300);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility hero-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--text-3xl);
+  color: var(--color-gray-100);
+  opacity: 0;
+
+  @media (width < theme(--breakpoint-md)) {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+}
+
+@utility hiw-title {
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  text-align: center;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: var(--text-7xl);
+  }
+}
+
+@utility hiw-subtitle {
+  color: var(--color-gray);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  padding-block: calc(var(--spacing) * 10);
+  text-align: center;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: var(--text-2xl);
+  }
+}
+
+@utility hiw-video {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  border-radius: 56px;
+  overflow: hidden;
+}
+
+@utility hiw-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 24);
+
+  @media (width >= theme(--breakpoint-md)) {
+    flex-direction: row;
+  }
+}
+
+@utility hiw-text {
+  color: var(--color-gray);
+  font-size: var(--text-xl);
+  font-weight: 400;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-weight: 600;
+  }
+}
+
+@utility hiw-bigtext {
+  color: white;
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  margin-block: calc(var(--spacing) * 2);
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: var(--text-5xl);
+    font-weight: 600;
+  }
+}
+
+@utility video-carousel_container {
+  position: relative;
+  width: 88vw;
+  height: 35vh;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    width: 70vw;
+    height: 50vh;
+  }
+
+  @media (width >= theme(--breakpoint-md)) {
+    height: 70vh;
+  }
+}
+
+@utility g_fadeIn {
+  opacity: 0;
+  translate: 0 100px;
+}
