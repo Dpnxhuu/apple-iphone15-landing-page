@@ -38,6 +38,13 @@
   }
 }
 
+@utility gradient-text {
+  background: linear-gradient(90deg, #F5E6C8 0%, #C8A96E 40%, #8B6914 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 @utility flex-center {
   display: flex;
   align-items: center;
@@ -69,7 +76,7 @@
   justify-content: center;
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 4);
-  border-radius: var(--radius-full);
+  border-radius: 35px;
   background-color: var(--color-gray-300);
   backdrop-filter: blur(8px);
 }
@@ -79,7 +86,7 @@
   align-items: center;
   justify-content: center;
   padding: calc(var(--spacing) * 1);
-  border-radius: var(--radius-full);
+  border-radius: 35px;
   background-color: var(--color-gray-300);
   backdrop-filter: blur(8px);
   margin-left: calc(var(--spacing) * 3);
@@ -95,7 +102,7 @@
   align-items: center;
   background-color: white;
   color: black;
-  border-radius: var(--radius-full);
+  border-radius: 50%;
   transition: all 150ms;
 }
 
@@ -103,7 +110,7 @@
   padding-block: calc(var(--spacing) * 20);
   padding-inline: calc(var(--spacing) * 5);
 
-  @media (width >= theme(--breakpoint-sm)) {
+  @media (width >=theme(--breakpoint-sm)) {
     padding-block: calc(var(--spacing) * 32);
     padding-inline: calc(var(--spacing) * 10);
   }
@@ -117,11 +124,11 @@
   opacity: 0;
   translate: 0 80px;
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     font-size: var(--text-5xl);
   }
 
-  @media (width >= theme(--breakpoint-lg)) {
+  @media (width >=theme(--breakpoint-lg)) {
     font-size: var(--text-6xl);
     margin-bottom: 0;
   }
@@ -135,7 +142,7 @@
   opacity: 0;
   translate: 0 100px;
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     font-size: var(--text-xl);
   }
 }
@@ -149,7 +156,7 @@
   margin-top: calc(var(--spacing) * 10);
   gap: calc(var(--spacing) * 5);
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     flex-direction: row;
     margin-top: calc(var(--spacing) * 16);
   }
@@ -171,7 +178,7 @@
   gap: calc(var(--spacing) * 5);
   align-items: center;
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     flex-direction: row;
   }
 }
@@ -181,7 +188,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: var(--text-xl);
   opacity: 0;
   translate: 0 80px;
 
@@ -193,12 +199,12 @@
 @utility control-btn {
   margin-left: calc(var(--spacing) * 4);
   padding: calc(var(--spacing) * 4);
-  border-radius: var(--radius-full);
+  border-radius: 50%;
   background-color: var(--color-gray-300);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
 
 @utility hero-title {
@@ -218,7 +224,7 @@
   font-weight: 600;
   text-align: center;
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     font-size: var(--text-7xl);
   }
 }
@@ -230,7 +236,7 @@
   padding-block: calc(var(--spacing) * 10);
   text-align: center;
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     font-size: var(--text-2xl);
   }
 }
@@ -239,7 +245,6 @@
   position: absolute;
   width: 95%;
   height: 90%;
-  border-radius: 56px;
   overflow: hidden;
 }
 
@@ -250,7 +255,7 @@
   align-items: flex-start;
   gap: calc(var(--spacing) * 24);
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     flex-direction: row;
   }
 }
@@ -260,7 +265,7 @@
   font-size: var(--text-xl);
   font-weight: 400;
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     font-weight: 600;
   }
 }
@@ -271,7 +276,7 @@
   font-weight: 400;
   margin-block: calc(var(--spacing) * 2);
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     font-size: var(--text-5xl);
     font-weight: 600;
   }
@@ -282,12 +287,12 @@
   width: 88vw;
   height: 35vh;
 
-  @media (width >= theme(--breakpoint-sm)) {
+  @media (width >=theme(--breakpoint-sm)) {
     width: 70vw;
     height: 50vh;
   }
 
-  @media (width >= theme(--breakpoint-md)) {
+  @media (width >=theme(--breakpoint-md)) {
     height: 70vh;
   }
 }
