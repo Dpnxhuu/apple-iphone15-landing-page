@@ -1,4 +1,4 @@
-# 🍎 Apple iPhone 15 Pro — Landing Page Clone
+# Apple iPhone 15 Pro — Landing Page Clone
 
 A visually stunning Apple iPhone 15 Pro product landing page clone built with React, Three.js, GSAP, and Tailwind CSS. Inspired by Apple's official product page, this project focuses on smooth animations, 3D model rendering, and a premium user experience.
 
