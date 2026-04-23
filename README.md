@@ -8,7 +8,7 @@ A visually stunning Apple iPhone 15 Pro product landing page clone built with Re
 
 ## 📸 Preview
 
-![Apple iPhone 15 Pro Landing Page](https://applei15pro.vercel.app/og-image.png)
+![Apple iPhone 15 Pro Landing Page](https://applei15pro.vercel.app/preview.png)
 
 ---
 
