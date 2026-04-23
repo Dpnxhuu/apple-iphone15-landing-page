@@ -39,7 +39,7 @@ const ModelView = ({
         ref={controlRef}
         enableZoom={false}
         enablePan={false}
-        rotateSpeed={0.4}
+        rotateSpeed={1.5}
         target={target}
         onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
       />
