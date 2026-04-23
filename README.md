@@ -2,13 +2,13 @@
 
 A visually stunning Apple iPhone 15 Pro product landing page clone built with React, Three.js, GSAP, and Tailwind CSS. Inspired by Apple's official product page, this project focuses on smooth animations, 3D model rendering, and a premium user experience.
 
-**🔗 Live Demo:** [applei5pro.vercel.app](https://applei5pro.vercel.app/)
+**🔗 Live Demo:** [applei5pro.vercel.app](https://applei15pro.vercel.app/)
 
 ---
 
 ## 📸 Preview
 
-![Apple iPhone 15 Pro Landing Page](https://applei5pro.vercel.app/og-image.png)
+![Apple iPhone 15 Pro Landing Page](https://applei15pro.vercel.app/og-image.png)
 
 ---
 
