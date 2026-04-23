@@ -62,7 +62,9 @@ const Model = () => {
         </h1>
 
         <div className="flex flex-col items-center mt-5">
-          <div className="w-[80%] lg:w-full h-[70vh] md:h-[90vh] overflow-hidden relative">
+          <div className="w-[80%] lg:w-full h-[70vh] md:h-[90vh] overflow-hidden relative"
+          style={{ clipPath: 'inset(0)' }}
+          >
             <ModelView
               index={1}
               groupRef={small}
@@ -90,7 +92,6 @@ const Model = () => {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                overflow: "hidden",
               }}
               eventSource={document.getElementById("root")}
               eventPrefix="client"
