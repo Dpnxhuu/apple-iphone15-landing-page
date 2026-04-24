@@ -14,7 +14,8 @@ const HowItWorks = () => {
     gsap.from("#chip", {
       scrollTrigger: {
         trigger: "#chip",
-        start: "top 85%",
+        start: "top 75%",
+        end: "bottom top",
       },
       opacity: 0,
       scale: 2,

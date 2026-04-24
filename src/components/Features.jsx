@@ -24,9 +24,15 @@ const Features = () => {
       },
     );
 
-    animateWithGsap('.g_text',
-        {y: 0, opacity: 1, ease: 'power2.inOut', duration: 1}
-    )
+    animateWithGsap(
+      ".g_text",
+      { y: 0, opacity: 1, ease: "power2.inOut", duration: 1 },
+      {
+        start: "top 85%",
+        end: "bottom 20",
+        toggleActions: "restart none none none",
+      },
+    );
   }, []);
 
   return (
@@ -81,18 +87,25 @@ const Features = () => {
 
               <div className="feature-text-container">
                 <div className="flex-1 flex-center">
-                    <p className="feature-text g_text">
-                        iPhone 15 Pro {' '}
-                        <span className="text-white">the first iPhone to feature aerospace-grade titanium design, </span>
-                        using the same alloy that spacecraft use for missions to Mars.
-                    </p>
+                  <p className="feature-text g_text">
+                    iPhone 15 Pro{" "}
+                    <span className="text-white">
+                      the first iPhone to feature aerospace-grade titanium
+                      design,{" "}
+                    </span>
+                    using the same alloy that spacecraft use for missions to
+                    Mars.
+                  </p>
                 </div>
                 <div className="flex-1 flex-center">
-                    <p className="feature-text g_text">
-                        Titanium has one the best strength-to-weight ratios of any metal, making these our {' '}
-                        <span className="text-white">lightest Pro models ever. </span>
-                       You'll notice the difference the moment you pick one up.
-                    </p>
+                  <p className="feature-text g_text">
+                    Titanium has one the best strength-to-weight ratios of any
+                    metal, making these our{" "}
+                    <span className="text-white">
+                      lightest Pro models ever.{" "}
+                    </span>
+                    You'll notice the difference the moment you pick one up.
+                  </p>
                 </div>
               </div>
             </div>
