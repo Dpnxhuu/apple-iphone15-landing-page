@@ -33,7 +33,8 @@ const HowItWorks = () => {
       {
         trigger: ".hiw-text-container",
         start: "top 85%",
-        end: "bottom 20%",
+        end: "bottom 20",
+        toggleActions: "restart none none none",
       },
     );
   }, []);
