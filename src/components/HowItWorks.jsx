@@ -22,12 +22,20 @@ const HowItWorks = () => {
       ease: "power2.inOut",
     });
 
-    animateWithGsap(".g_fadeIn", {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power2.inOut",
-    });
+    animateWithGsap(
+      ".g_fadeIn",
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.inOut",
+      },
+      {
+        trigger: ".hiw-text-container",
+        start: "top 85%",
+        end: "bottom 20%",
+      },
+    );
   }, []);
 
   return (
